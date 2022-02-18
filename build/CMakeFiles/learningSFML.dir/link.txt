@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/learningSFML.dir/GraphicsManager.cpp.o CMakeFiles/learningSFML.dir/MyRobot.cpp.o CMakeFiles/learningSFML.dir/Robot.cpp.o CMakeFiles/learningSFML.dir/Room.cpp.o CMakeFiles/learningSFML.dir/main.cpp.o -o learningSFML  -lsfml-window -lsfml-network -lsfml-system -lsfml-graphics -lsfml-audio 
