@@ -26,17 +26,29 @@ void MyRobot::back()
 	switch(Robot::get_dir())
 	{
 		case NORTH:
-			Robot::setY(Robot::get_ypos()+1);
+		{
+			if(!room->isObstacle(Robot::get_xpos(),Robot::get_ypos()+1))
+				Robot::setY(Robot::get_ypos()+1);
 			break;
+		}
 		case SOUTH:
-			Robot::setY(Robot::get_ypos()-1);
+		{
+			if(!room->isObstacle(Robot::get_xpos(),Robot::get_ypos()-1))
+				Robot::setY(Robot::get_ypos()-1);
 			break;
+		}
 		case EAST:
-			Robot::setX(Robot::get_xpos()-1);
+		{
+			if(!room->isObstacle(Robot::get_xpos()-1,Robot::get_ypos()))
+				Robot::setX(Robot::get_xpos()-1);
 			break;
+		}
 		case WEST:
-			Robot::setX(Robot::get_xpos()+1);
+		{
+			if(!room->isObstacle(Robot::get_xpos()+1,Robot::get_ypos()))
+				Robot::setX(Robot::get_xpos()+1);
 			break;
+		}
 		default:
 			break;
 	}
